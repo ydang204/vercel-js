@@ -12,21 +12,21 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(helmet());
 app.use('/', routes);
 //parse request of content type JSON
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
-require("dotenv-flow").config();
+// require("dotenv-flow").config();
 
-//connect mongodb
-mongoose.connect
-(
-    process.env.DBHOST,
-    {
-        useUnifiedTopology: true,
-        useNewUrlParser: true
-    }
-).catch(error => console.log("Error connecting to mongoDB:" + error));
+// //connect mongodb
+// mongoose.connect
+// (
+//     process.env.DBHOST,
+//     {
+//         useUnifiedTopology: true,
+//         useNewUrlParser: true
+//     }
+// ).catch(error => console.log("Error connecting to mongoDB:" + error));
 
-mongoose.connection.once("open", () => console.log("Connected successfully to mongoDB"));
+// mongoose.connection.once("open", () => console.log("Connected successfully to mongoDB"));
 
 // default catch all handler
 app.all('*', (req, res) => res.status(404).json(new ErrorResponseObject('route not defined')));
