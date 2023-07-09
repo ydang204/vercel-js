@@ -1,9 +1,9 @@
 const { Router } = require('express');
 const { SuccessResponseObject } = require('../common/http');
 const demo = require('./demo.route');
-const productRoutes = require("./product");
-const authRoutes = require("./auth");
-const { verifyToken } = require("../validation");
+// const productRoutes = require("./product");
+// const authRoutes = require("./auth");
+// const { verifyToken } = require("../validation");
 
 const r = Router();
 
