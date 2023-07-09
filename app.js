@@ -19,7 +19,7 @@ require("dotenv-flow").config();
 //connect mongodb
 mongoose.connect
 (
-    process.env.DBHOST,
+    'mongodb+srv://dbuser:danghuynhnhuy123@cluster0.nakww1p.mongodb.net/',
     {
         useUnifiedTopology: true,
         useNewUrlParser: true
