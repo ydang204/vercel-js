@@ -14,8 +14,6 @@ app.use('/', routes);
 // parse request of content type JSON
 app.use(bodyParser.json());
 
-require("dotenv-flow").config();
-
 //connect mongodb
 mongoose.connect
 (
