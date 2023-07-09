@@ -8,8 +8,8 @@ const { verifyToken } = require("../validation");
 const r = Router();
 
 r.use('/demo', demo);
-app.use("/api/products", verifyToken, productRoutes);
-app.use("/api/user", authRoutes);
+r.use("/api/products", verifyToken, productRoutes);
+r.use("/api/user", authRoutes);
 
 r.get('/', (req, res) => res.json(new SuccessResponseObject('express vercel boiler plate')));
 
