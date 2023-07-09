@@ -2,8 +2,6 @@ const express = require('express');
 const helmet = require('helmet');
 const { ErrorResponseObject } = require('./common/http');
 const routes = require('./routes');
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
 
 const app = express();
 
